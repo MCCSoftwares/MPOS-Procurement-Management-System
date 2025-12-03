@@ -458,6 +458,12 @@
     <Compile Include="frmprocurement.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRCPPE.Designer.vb">
+      <DependentUpon>frmRCPPE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRCPPE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmrfq.Designer.vb">
       <DependentUpon>frmrfq.vb</DependentUpon>
     </Compile>
@@ -700,6 +706,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmprocurement.resx">
       <DependentUpon>frmprocurement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRCPPE.resx">
+      <DependentUpon>frmRCPPE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmrfq.resx">
       <DependentUpon>frmrfq.vb</DependentUpon>
