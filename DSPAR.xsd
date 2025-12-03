@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSPAR" targetNamespace="http://tempuri.org/rptpar.xsd" xmlns:mstns="http://tempuri.org/rptpar.xsd" xmlns="http://tempuri.org/rptpar.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSPAR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSPAR" msprop:Generator_UserDSName="DSPAR">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTPAR" msprop:Generator_TableClassName="DTPARDataTable" msprop:Generator_TableVarName="tableDTPAR" msprop:Generator_RowChangedName="DTPARRowChanged" msprop:Generator_TablePropName="DTPAR" msprop:Generator_RowDeletingName="DTPARRowDeleting" msprop:Generator_RowChangingName="DTPARRowChanging" msprop:Generator_RowEvHandlerName="DTPARRowChangeEventHandler" msprop:Generator_RowDeletedName="DTPARRowDeleted" msprop:Generator_RowClassName="DTPARRow" msprop:Generator_UserTableName="DTPAR" msprop:Generator_RowEvArgName="DTPARRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="qty" msprop:Generator_ColumnVarNameInTable="columnqty" msprop:Generator_ColumnPropNameInRow="qty" msprop:Generator_ColumnPropNameInTable="qtyColumn" msprop:Generator_UserColumnName="qty" type="xs:string" minOccurs="0" />
+              <xs:element name="unit" msprop:Generator_ColumnVarNameInTable="columnunit" msprop:Generator_ColumnPropNameInRow="unit" msprop:Generator_ColumnPropNameInTable="unitColumn" msprop:Generator_UserColumnName="unit" type="xs:string" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" type="xs:string" minOccurs="0" />
+              <xs:element name="property_number" msprop:Generator_ColumnVarNameInTable="columnproperty_number" msprop:Generator_ColumnPropNameInRow="property_number" msprop:Generator_ColumnPropNameInTable="property_numberColumn" msprop:Generator_UserColumnName="property_number" type="xs:string" minOccurs="0" />
+              <xs:element name="date_aquired" msprop:Generator_ColumnVarNameInTable="columndate_aquired" msprop:Generator_ColumnPropNameInRow="date_aquired" msprop:Generator_ColumnPropNameInTable="date_aquiredColumn" msprop:Generator_UserColumnName="date_aquired" type="xs:string" minOccurs="0" />
+              <xs:element name="total_cost" msprop:Generator_ColumnVarNameInTable="columntotal_cost" msprop:Generator_ColumnPropNameInRow="total_cost" msprop:Generator_ColumnPropNameInTable="total_costColumn" msprop:Generator_UserColumnName="total_cost" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

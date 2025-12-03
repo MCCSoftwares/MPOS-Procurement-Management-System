@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSIAR" targetNamespace="http://tempuri.org/DSIAR.xsd" xmlns:mstns="http://tempuri.org/DSIAR.xsd" xmlns="http://tempuri.org/DSIAR.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSIAR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSIAR" msprop:Generator_UserDSName="DSIAR">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTIAR" msprop:Generator_TableClassName="DTIARDataTable" msprop:Generator_TableVarName="tableDTIAR" msprop:Generator_TablePropName="DTIAR" msprop:Generator_RowDeletingName="DTIARRowDeleting" msprop:Generator_RowChangingName="DTIARRowChanging" msprop:Generator_RowEvHandlerName="DTIARRowChangeEventHandler" msprop:Generator_RowDeletedName="DTIARRowDeleted" msprop:Generator_UserTableName="DTIAR" msprop:Generator_RowChangedName="DTIARRowChanged" msprop:Generator_RowEvArgName="DTIARRowChangeEvent" msprop:Generator_RowClassName="DTIARRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMNO" msprop:Generator_ColumnVarNameInTable="columnITEMNO" msprop:Generator_ColumnPropNameInRow="ITEMNO" msprop:Generator_ColumnPropNameInTable="ITEMNOColumn" msprop:Generator_UserColumnName="ITEMNO" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPTIONS" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTIONS" msprop:Generator_ColumnPropNameInRow="DESCRIPTIONS" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONSColumn" msprop:Generator_UserColumnName="DESCRIPTIONS" type="xs:string" minOccurs="0" />
+              <xs:element name="UNITS" msprop:Generator_ColumnVarNameInTable="columnUNITS" msprop:Generator_ColumnPropNameInRow="UNITS" msprop:Generator_ColumnPropNameInTable="UNITSColumn" msprop:Generator_UserColumnName="UNITS" type="xs:string" minOccurs="0" />
+              <xs:element name="QUANTITY" msprop:Generator_ColumnVarNameInTable="columnQUANTITY" msprop:Generator_ColumnPropNameInRow="QUANTITY" msprop:Generator_ColumnPropNameInTable="QUANTITYColumn" msprop:Generator_UserColumnName="QUANTITY" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

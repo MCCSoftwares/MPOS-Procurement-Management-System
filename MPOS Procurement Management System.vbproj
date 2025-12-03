@@ -1,0 +1,1067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C72FE30D-F29D-4380-8D6D-A918CFD5D065}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MPOS_Procurement_Management_System.My.MyApplication</StartupObject>
+    <RootNamespace>MPOS_Procurement_Management_System</RootNamespace>
+    <AssemblyName>MPOS Procurement Management System</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>D:\NEW .NET PROJECTS\MPOS Procurement System\mpos\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://mpos-clickonce-update.s3.ap-southeast-1.amazonaws.com/mpos/</InstallUrl>
+    <ProductName>MPOS Procurement Management System</ProductName>
+    <PublisherName>MCC Softwares</PublisherName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationVersion>1.1.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MPOS Procurement Management System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MPOS Procurement Management System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MPOS Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B612F99A20CB3A7729BE09F62131E1E8B0201F33</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MPOS Procurement Management System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDate.vb" />
+    <Compile Include="ConnectionLatencyMonitor.vb" />
+    <Compile Include="DateFormatHelper.vb" />
+    <Compile Include="DSABS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSABS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSABS.vb">
+      <DependentUpon>DSABS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSIAR.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSIAR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSICS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSICS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSICS.vb">
+      <DependentUpon>DSICS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPO.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPO.vb">
+      <DependentUpon>DSPO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPR.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRFQ.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRFQ.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRFQ.vb">
+      <DependentUpon>DSRFQ.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRIS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRIS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRIS.vb">
+      <DependentUpon>DSRIS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRSMI.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRSMI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRSMI.vb">
+      <DependentUpon>DSRSMI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSSTOCKCARD.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSTOCKCARD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSSTOCKCARD.vb">
+      <DependentUpon>DSSTOCKCARD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmabout.Designer.vb">
+      <DependentUpon>frmabout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmabout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmabstract.Designer.vb">
+      <DependentUpon>frmabstract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmabstract.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmabstractadd.Designer.vb">
+      <DependentUpon>frmabstractadd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmabstractadd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmabstractfile.Designer.vb">
+      <DependentUpon>frmabstractfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmabstractfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmabstractremarks.Designer.vb">
+      <DependentUpon>frmabstractremarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmabstractremarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmapp.Designer.vb">
+      <DependentUpon>frmapp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmapp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmapprovals.Designer.vb">
+      <DependentUpon>frmapprovals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmapprovals.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmapprovalsinfo.Designer.vb">
+      <DependentUpon>frmapprovalsinfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmapprovalsinfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmchangelogs.Designer.vb">
+      <DependentUpon>frmchangelogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmchangelogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconfig.Designer.vb">
+      <DependentUpon>frmconfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmconfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconfiguser.Designer.vb">
+      <DependentUpon>frmconfiguser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmconfiguser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconnerror.Designer.vb">
+      <DependentUpon>frmconnerror.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmconnerror.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconsetup.Designer.vb">
+      <DependentUpon>frmconsetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmconsetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdelivery.Designer.vb">
+      <DependentUpon>frmdelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmdelivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdeliveryadd.Designer.vb">
+      <DependentUpon>frmdeliveryadd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmdeliveryadd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdeliveryfile.Designer.vb">
+      <DependentUpon>frmdeliveryfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmdeliveryfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdeliveryfile2.Designer.vb">
+      <DependentUpon>frmdeliveryfile2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmdeliveryfile2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmequipment.Designer.vb">
+      <DependentUpon>frmequipment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmequipment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmequipmentadd.Designer.vb">
+      <DependentUpon>frmequipmentadd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmequipmentadd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frminventory.Designer.vb">
+      <DependentUpon>frminventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frminventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frminventoryfile.Designer.vb">
+      <DependentUpon>frminventoryfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frminventoryfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frminventoryfind.Designer.vb">
+      <DependentUpon>frminventoryfind.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frminventoryfind.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frminventoryimport.Designer.vb">
+      <DependentUpon>frminventoryimport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frminventoryimport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmissuance.Designer.vb">
+      <DependentUpon>frmissuance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmissuance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmissuancePPE.Designer.vb">
+      <DependentUpon>frmissuancePPE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmissuancePPE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmissuancePPEAdd.Designer.vb">
+      <DependentUpon>frmissuancePPEAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmissuancePPEAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmissuancePPEFile.Designer.vb">
+      <DependentUpon>frmissuancePPEFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmissuancePPEFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmissuanceSEP.Designer.vb">
+      <DependentUpon>frmissuanceSEP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmissuanceSEP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmissuanceSEPAdd.Designer.vb">
+      <DependentUpon>frmissuanceSEPAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmissuanceSEPAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmissuanceSEPFile.Designer.vb">
+      <DependentUpon>frmissuanceSEPFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmissuanceSEPFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.vb">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmain.Designer.vb">
+      <DependentUpon>frmmain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpo.Designer.vb">
+      <DependentUpon>frmpo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpoadd.Designer.vb">
+      <DependentUpon>frmpoadd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpoadd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpofile.Designer.vb">
+      <DependentUpon>frmpofile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpofile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmppmp.Designer.vb">
+      <DependentUpon>frmppmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmppmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmppmpfile.Designer.vb">
+      <DependentUpon>frmppmpfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmppmpfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpprev.Designer.vb">
+      <DependentUpon>frmpprev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpprev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpr.Designer.vb">
+      <DependentUpon>frmpr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpradd.Designer.vb">
+      <DependentUpon>frmpradd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpradd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpraddunit.Designer.vb">
+      <DependentUpon>frmpraddunit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpraddunit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmprfile.Designer.vb">
+      <DependentUpon>frmprfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmprfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmprocurement.Designer.vb">
+      <DependentUpon>frmprocurement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmprocurement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrfq.Designer.vb">
+      <DependentUpon>frmrfq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmrfq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrfqadd.Designer.vb">
+      <DependentUpon>frmrfqadd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmrfqadd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrfqfile.Designer.vb">
+      <DependentUpon>frmrfqfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmrfqfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrfqsupplier.Designer.vb">
+      <DependentUpon>frmrfqsupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmrfqsupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrfqupdate.Designer.vb">
+      <DependentUpon>frmrfqupdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmrfqupdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRIS.Designer.vb">
+      <DependentUpon>frmRIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRISFile.Designer.vb">
+      <DependentUpon>frmRISFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRISFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRSMI.Designer.vb">
+      <DependentUpon>frmRSMI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRSMI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsplash.Designer.vb">
+      <DependentUpon>frmsplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockCard.Designer.vb">
+      <DependentUpon>frmStockCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsuperadmin.Designer.vb">
+      <DependentUpon>frmsuperadmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsuperadmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsupplier.Designer.vb">
+      <DependentUpon>frmsupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsupplierfile.Designer.vb">
+      <DependentUpon>frmsupplierfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsupplierfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmtimesetup.Designer.vb">
+      <DependentUpon>frmtimesetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmtimesetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmwac.Designer.vb">
+      <DependentUpon>frmwac.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmwac.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NotificationHelper.vb" />
+    <Compile Include="DSPAR.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPAR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UiHelpers.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmabout.resx">
+      <DependentUpon>frmabout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmabstract.resx">
+      <DependentUpon>frmabstract.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmabstractadd.resx">
+      <DependentUpon>frmabstractadd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmabstractfile.resx">
+      <DependentUpon>frmabstractfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmabstractremarks.resx">
+      <DependentUpon>frmabstractremarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmapp.resx">
+      <DependentUpon>frmapp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmapprovals.resx">
+      <DependentUpon>frmapprovals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmapprovalsinfo.resx">
+      <DependentUpon>frmapprovalsinfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmchangelogs.resx">
+      <DependentUpon>frmchangelogs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconfig.resx">
+      <DependentUpon>frmconfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconfiguser.resx">
+      <DependentUpon>frmconfiguser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconnerror.resx">
+      <DependentUpon>frmconnerror.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconsetup.resx">
+      <DependentUpon>frmconsetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdelivery.resx">
+      <DependentUpon>frmdelivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdeliveryadd.resx">
+      <DependentUpon>frmdeliveryadd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdeliveryfile.resx">
+      <DependentUpon>frmdeliveryfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdeliveryfile2.resx">
+      <DependentUpon>frmdeliveryfile2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmequipment.resx">
+      <DependentUpon>frmequipment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmequipmentadd.resx">
+      <DependentUpon>frmequipmentadd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frminventory.resx">
+      <DependentUpon>frminventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frminventoryfile.resx">
+      <DependentUpon>frminventoryfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frminventoryfind.resx">
+      <DependentUpon>frminventoryfind.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frminventoryimport.resx">
+      <DependentUpon>frminventoryimport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmissuance.resx">
+      <DependentUpon>frmissuance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmissuancePPE.resx">
+      <DependentUpon>frmissuancePPE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmissuancePPEAdd.resx">
+      <DependentUpon>frmissuancePPEAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmissuancePPEFile.resx">
+      <DependentUpon>frmissuancePPEFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmissuanceSEP.resx">
+      <DependentUpon>frmissuanceSEP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmissuanceSEPAdd.resx">
+      <DependentUpon>frmissuanceSEPAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmissuanceSEPFile.resx">
+      <DependentUpon>frmissuanceSEPFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmain.resx">
+      <DependentUpon>frmmain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpo.resx">
+      <DependentUpon>frmpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpoadd.resx">
+      <DependentUpon>frmpoadd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpofile.resx">
+      <DependentUpon>frmpofile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmppmp.resx">
+      <DependentUpon>frmppmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmppmpfile.resx">
+      <DependentUpon>frmppmpfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpprev.resx">
+      <DependentUpon>frmpprev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpr.resx">
+      <DependentUpon>frmpr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpradd.resx">
+      <DependentUpon>frmpradd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpraddunit.resx">
+      <DependentUpon>frmpraddunit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmprfile.resx">
+      <DependentUpon>frmprfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmprocurement.resx">
+      <DependentUpon>frmprocurement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrfq.resx">
+      <DependentUpon>frmrfq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrfqadd.resx">
+      <DependentUpon>frmrfqadd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrfqfile.resx">
+      <DependentUpon>frmrfqfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrfqsupplier.resx">
+      <DependentUpon>frmrfqsupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrfqupdate.resx">
+      <DependentUpon>frmrfqupdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRIS.resx">
+      <DependentUpon>frmRIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRISFile.resx">
+      <DependentUpon>frmRISFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRSMI.resx">
+      <DependentUpon>frmRSMI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsplash.resx">
+      <DependentUpon>frmsplash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockCard.resx">
+      <DependentUpon>frmStockCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsuperadmin.resx">
+      <DependentUpon>frmsuperadmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsupplier.resx">
+      <DependentUpon>frmsupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsupplierfile.resx">
+      <DependentUpon>frmsupplierfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtimesetup.resx">
+      <DependentUpon>frmtimesetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmwac.resx">
+      <DependentUpon>frmwac.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Report\rptabsbids.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptiar.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptpo.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptpr.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptrfq.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptsuppquote.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptabsbidsless.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptpar.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptics.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptris.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptStockCard.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptrsmi.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DSABS.xsc">
+      <DependentUpon>DSABS.xsd</DependentUpon>
+    </None>
+    <None Include="DSABS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSABS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSABS.xss">
+      <DependentUpon>DSABS.xsd</DependentUpon>
+    </None>
+    <None Include="DSIAR.xsc">
+      <DependentUpon>DSIAR.xsd</DependentUpon>
+    </None>
+    <None Include="DSIAR.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSIAR.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSIAR.xss">
+      <DependentUpon>DSIAR.xsd</DependentUpon>
+    </None>
+    <None Include="DSICS.xsc">
+      <DependentUpon>DSICS.xsd</DependentUpon>
+    </None>
+    <None Include="DSICS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSICS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSICS.xss">
+      <DependentUpon>DSICS.xsd</DependentUpon>
+    </None>
+    <None Include="DSPO.xsc">
+      <DependentUpon>DSPO.xsd</DependentUpon>
+    </None>
+    <None Include="DSPO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPO.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSPO.xss">
+      <DependentUpon>DSPO.xsd</DependentUpon>
+    </None>
+    <None Include="DSPR.xsc">
+      <DependentUpon>DSPR.xsd</DependentUpon>
+    </None>
+    <None Include="DSPR.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPR.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSPR.xss">
+      <DependentUpon>DSPR.xsd</DependentUpon>
+    </None>
+    <None Include="DSRFQ.xsc">
+      <DependentUpon>DSRFQ.xsd</DependentUpon>
+    </None>
+    <None Include="DSRFQ.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRFQ.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSRFQ.xss">
+      <DependentUpon>DSRFQ.xsd</DependentUpon>
+    </None>
+    <None Include="DSRIS.xsc">
+      <DependentUpon>DSRIS.xsd</DependentUpon>
+    </None>
+    <None Include="DSRIS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRIS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSRIS.xss">
+      <DependentUpon>DSRIS.xsd</DependentUpon>
+    </None>
+    <None Include="DSRSMI.xsc">
+      <DependentUpon>DSRSMI.xsd</DependentUpon>
+    </None>
+    <None Include="DSRSMI.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRSMI.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSRSMI.xss">
+      <DependentUpon>DSRSMI.xsd</DependentUpon>
+    </None>
+    <None Include="DSSTOCKCARD.xsc">
+      <DependentUpon>DSSTOCKCARD.xsd</DependentUpon>
+    </None>
+    <None Include="DSSTOCKCARD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSTOCKCARD.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSSTOCKCARD.xss">
+      <DependentUpon>DSSTOCKCARD.xsd</DependentUpon>
+    </None>
+    <None Include="MPOS Procurement Management System_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <Content Include="Resources\123.png" />
+    <Content Include="Resources\About.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Add Image.png" />
+    <Content Include="Resources\add multiple.png" />
+    <Content Include="Resources\add-button.png" />
+    <Content Include="Resources\add-store.png" />
+    <Content Include="Resources\add-user.png" />
+    <Content Include="Resources\Admission.png" />
+    <Content Include="Resources\agreement.png" />
+    <Content Include="Resources\approve.png" />
+    <Content Include="Resources\BARMM Logo.png" />
+    <Content Include="Resources\calendar.png" />
+    <Content Include="Resources\cancel white.png" />
+    <Content Include="Resources\cancel.png" />
+    <Content Include="Resources\caution.ico" />
+    <Content Include="Resources\certificate.png" />
+    <Content Include="Resources\check-out.png" />
+    <Content Include="Resources\check.png" />
+    <Content Include="Resources\checklist.png" />
+    <Content Include="Resources\checkout.png" />
+    <Content Include="Resources\clear.png" />
+    <Content Include="Resources\clipboard color.png" />
+    <Content Include="Resources\clipboard.png" />
+    <Content Include="Resources\close 24.png" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\comment.png" />
+    <Content Include="Resources\compare.png" />
+    <Content Include="Resources\configuration.png" />
+    <Content Include="Resources\connection error.png" />
+    <Content Include="Resources\copy.png" />
+    <Content Include="Resources\dashboard.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\delivered.png" />
+    <Content Include="Resources\delivery.png" />
+    <Content Include="Resources\diskette.png" />
+    <Content Include="Resources\download.png" />
+    <Content Include="Resources\edit-text.png" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\Evening.png" />
+    <Content Include="Resources\fast-forward-button.png" />
+    <Content Include="Resources\folder.png" />
+    <Content Include="Resources\Form.ico" />
+    <Content Include="Resources\garbage.png" />
+    <Content Include="Resources\hamburger.png" />
+    <Content Include="Resources\header.png" />
+    <Content Include="Resources\HOME LOGO.png" />
+    <Content Include="Resources\info 16.png" />
+    <Content Include="Resources\info white.png" />
+    <Content Include="Resources\info.png" />
+    <Content Include="Resources\inventory-management.png" />
+    <Content Include="Resources\Inventory.png" />
+    <Content Include="Resources\key-chain.png" />
+    <Content Include="Resources\key.png" />
+    <Content Include="Resources\letter.png" />
+    <Content Include="Resources\Loading.gif" />
+    <Content Include="Resources\Login Screen.png" />
+    <Content Include="Resources\login.png" />
+    <Content Include="Resources\logout 16.png" />
+    <Content Include="Resources\logout.png" />
+    <Content Include="Resources\loupe.png" />
+    <Content Include="Resources\medical-history.png" />
+    <Content Include="Resources\Morning.png" />
+    <Content Include="Resources\MPOS Logo.png" />
+    <Content Include="Resources\next-button.png" />
+    <Content Include="Resources\Noon.png" />
+    <Content Include="Resources\open-folder.png" />
+    <Content Include="Resources\package.png" />
+    <Content Include="Resources\patient.png" />
+    <Content Include="Resources\pencil 24.png" />
+    <Content Include="Resources\pencil.png" />
+    <Content Include="Resources\people.png" />
+    <Content Include="Resources\previous.png" />
+    <Content Include="Resources\printer 24.png" />
+    <Content Include="Resources\printer.png" />
+    <Content Include="Resources\procurement.png" />
+    <Content Include="Resources\purchase-order.png" />
+    <Content Include="Resources\receive-amount.png" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\remove.png" />
+    <Content Include="Resources\report.png" />
+    <Content Include="Resources\Resfresh.png" />
+    <Content Include="Resources\right-arrow.png" />
+    <Content Include="Resources\right.png" />
+    <Content Include="Resources\Rotate Image.png" />
+    <Content Include="Resources\save 24.png" />
+    <Content Include="Resources\schedule.png" />
+    <Content Include="Resources\search.png" />
+    <Content Include="Resources\secretary.png" />
+    <Content Include="Resources\settings.png" />
+    <Content Include="Resources\Splash.png" />
+    <Content Include="Resources\Supersettings.png" />
+    <Content Include="Resources\switch 16.png" />
+    <Content Include="Resources\sync.png" />
+    <Content Include="Resources\system.ico" />
+    <Content Include="Resources\Time and Date.png" />
+    <Content Include="Resources\trash 24.png" />
+    <Content Include="Resources\trash-can.png" />
+    <Content Include="Resources\trash_16.png" />
+    <Content Include="Resources\user 16.png" />
+    <Content Include="Resources\user avatar.png" />
+    <Content Include="Resources\user-check.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\user_icon.png" />
+    <Content Include="Resources\weblogo.png" />
+    <Content Include="server.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="DSPAR.xsc">
+      <DependentUpon>DSPAR.xsd</DependentUpon>
+    </None>
+    <None Include="DSPAR.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPAR.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSPAR.xss">
+      <DependentUpon>DSPAR.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MPOS Logo.ico" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

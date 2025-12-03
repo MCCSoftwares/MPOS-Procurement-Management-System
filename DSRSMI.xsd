@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSRSMI" targetNamespace="http://tempuri.org/DSRSMI.xsd" xmlns:mstns="http://tempuri.org/DSRSMI.xsd" xmlns="http://tempuri.org/DSRSMI.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSRSMI" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSRSMI" msprop:Generator_UserDSName="DSRSMI">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTRSMI" msprop:Generator_TableClassName="DTRSMIDataTable" msprop:Generator_TableVarName="tableDTRSMI" msprop:Generator_TablePropName="DTRSMI" msprop:Generator_RowDeletingName="DTRSMIRowDeleting" msprop:Generator_RowChangingName="DTRSMIRowChanging" msprop:Generator_RowEvHandlerName="DTRSMIRowChangeEventHandler" msprop:Generator_RowDeletedName="DTRSMIRowDeleted" msprop:Generator_UserTableName="DTRSMI" msprop:Generator_RowChangedName="DTRSMIRowChanged" msprop:Generator_RowEvArgName="DTRSMIRowChangeEvent" msprop:Generator_RowClassName="DTRSMIRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RIS_NO" msprop:Generator_ColumnVarNameInTable="columnRIS_NO" msprop:Generator_ColumnPropNameInRow="RIS_NO" msprop:Generator_ColumnPropNameInTable="RIS_NOColumn" msprop:Generator_UserColumnName="RIS_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="RCCODE" msprop:Generator_ColumnVarNameInTable="columnRCCODE" msprop:Generator_ColumnPropNameInRow="RCCODE" msprop:Generator_ColumnPropNameInTable="RCCODEColumn" msprop:Generator_UserColumnName="RCCODE" type="xs:string" minOccurs="0" />
+              <xs:element name="STOCK_NO" msprop:Generator_ColumnVarNameInTable="columnSTOCK_NO" msprop:Generator_ColumnPropNameInRow="STOCK_NO" msprop:Generator_ColumnPropNameInTable="STOCK_NOColumn" msprop:Generator_UserColumnName="STOCK_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="DESC" msprop:Generator_ColumnVarNameInTable="columnDESC" msprop:Generator_ColumnPropNameInRow="DESC" msprop:Generator_ColumnPropNameInTable="DESCColumn" msprop:Generator_UserColumnName="DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="UNIT" msprop:Generator_ColumnVarNameInTable="columnUNIT" msprop:Generator_ColumnPropNameInRow="UNIT" msprop:Generator_ColumnPropNameInTable="UNITColumn" msprop:Generator_UserColumnName="UNIT" type="xs:string" minOccurs="0" />
+              <xs:element name="QISSUED" msprop:Generator_ColumnVarNameInTable="columnQISSUED" msprop:Generator_ColumnPropNameInRow="QISSUED" msprop:Generator_ColumnPropNameInTable="QISSUEDColumn" msprop:Generator_UserColumnName="QISSUED" type="xs:string" minOccurs="0" />
+              <xs:element name="UCOST" msprop:Generator_ColumnVarNameInTable="columnUCOST" msprop:Generator_ColumnPropNameInRow="UCOST" msprop:Generator_ColumnPropNameInTable="UCOSTColumn" msprop:Generator_UserColumnName="UCOST" type="xs:string" minOccurs="0" />
+              <xs:element name="AMOUNT" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DTRECAP" msprop:Generator_TableClassName="DTRECAPDataTable" msprop:Generator_TableVarName="tableDTRECAP" msprop:Generator_TablePropName="DTRECAP" msprop:Generator_RowDeletingName="DTRECAPRowDeleting" msprop:Generator_RowChangingName="DTRECAPRowChanging" msprop:Generator_RowEvHandlerName="DTRECAPRowChangeEventHandler" msprop:Generator_RowDeletedName="DTRECAPRowDeleted" msprop:Generator_UserTableName="DTRECAP" msprop:Generator_RowChangedName="DTRECAPRowChanged" msprop:Generator_RowEvArgName="DTRECAPRowChangeEvent" msprop:Generator_RowClassName="DTRECAPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STOCK_NO" msprop:Generator_ColumnVarNameInTable="columnSTOCK_NO" msprop:Generator_ColumnPropNameInRow="STOCK_NO" msprop:Generator_ColumnPropNameInTable="STOCK_NOColumn" msprop:Generator_UserColumnName="STOCK_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="QUANTITY" msprop:Generator_ColumnVarNameInTable="columnQUANTITY" msprop:Generator_ColumnPropNameInRow="QUANTITY" msprop:Generator_ColumnPropNameInTable="QUANTITYColumn" msprop:Generator_UserColumnName="QUANTITY" type="xs:string" minOccurs="0" />
+              <xs:element name="UCOST" msprop:Generator_ColumnVarNameInTable="columnUCOST" msprop:Generator_ColumnPropNameInRow="UCOST" msprop:Generator_ColumnPropNameInTable="UCOSTColumn" msprop:Generator_UserColumnName="UCOST" type="xs:string" minOccurs="0" />
+              <xs:element name="TCOST" msprop:Generator_ColumnVarNameInTable="columnTCOST" msprop:Generator_ColumnPropNameInRow="TCOST" msprop:Generator_ColumnPropNameInTable="TCOSTColumn" msprop:Generator_UserColumnName="TCOST" type="xs:string" minOccurs="0" />
+              <xs:element name="UACSOCODE" msprop:Generator_ColumnVarNameInTable="columnUACSOCODE" msprop:Generator_ColumnPropNameInRow="UACSOCODE" msprop:Generator_ColumnPropNameInTable="UACSOCODEColumn" msprop:Generator_UserColumnName="UACSOCODE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

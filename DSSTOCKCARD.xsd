@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSTOCKCARD" targetNamespace="http://tempuri.org/DSSTOCKCARD.xsd" xmlns:mstns="http://tempuri.org/DSSTOCKCARD.xsd" xmlns="http://tempuri.org/DSSTOCKCARD.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSTOCKCARD" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSSTOCKCARD" msprop:Generator_UserDSName="DSSTOCKCARD">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTSTOCKCARD" msprop:Generator_TableClassName="DTSTOCKCARDDataTable" msprop:Generator_TableVarName="tableDTSTOCKCARD" msprop:Generator_TablePropName="DTSTOCKCARD" msprop:Generator_RowDeletingName="DTSTOCKCARDRowDeleting" msprop:Generator_RowChangingName="DTSTOCKCARDRowChanging" msprop:Generator_RowEvHandlerName="DTSTOCKCARDRowChangeEventHandler" msprop:Generator_RowDeletedName="DTSTOCKCARDRowDeleted" msprop:Generator_UserTableName="DTSTOCKCARD" msprop:Generator_RowChangedName="DTSTOCKCARDRowChanged" msprop:Generator_RowEvArgName="DTSTOCKCARDRowChangeEvent" msprop:Generator_RowClassName="DTSTOCKCARDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IAR_DATE" msprop:Generator_ColumnVarNameInTable="columnIAR_DATE" msprop:Generator_ColumnPropNameInRow="IAR_DATE" msprop:Generator_ColumnPropNameInTable="IAR_DATEColumn" msprop:Generator_UserColumnName="IAR_DATE" type="xs:string" minOccurs="0" />
+              <xs:element name="IAR_SERIES" msprop:Generator_ColumnVarNameInTable="columnIAR_SERIES" msprop:Generator_ColumnPropNameInRow="IAR_SERIES" msprop:Generator_ColumnPropNameInTable="IAR_SERIESColumn" msprop:Generator_UserColumnName="IAR_SERIES" type="xs:string" minOccurs="0" />
+              <xs:element name="IAR_QTY" msprop:Generator_ColumnVarNameInTable="columnIAR_QTY" msprop:Generator_ColumnPropNameInRow="IAR_QTY" msprop:Generator_ColumnPropNameInTable="IAR_QTYColumn" msprop:Generator_UserColumnName="IAR_QTY" type="xs:string" minOccurs="0" />
+              <xs:element name="RIS_IAR_DATE" msprop:Generator_ColumnVarNameInTable="columnRIS_IAR_DATE" msprop:Generator_ColumnPropNameInRow="RIS_IAR_DATE" msprop:Generator_ColumnPropNameInTable="RIS_IAR_DATEColumn" msprop:Generator_UserColumnName="RIS_IAR_DATE" type="xs:string" minOccurs="0" />
+              <xs:element name="RIS_SERIES" msprop:Generator_ColumnVarNameInTable="columnRIS_SERIES" msprop:Generator_ColumnPropNameInRow="RIS_SERIES" msprop:Generator_ColumnPropNameInTable="RIS_SERIESColumn" msprop:Generator_UserColumnName="RIS_SERIES" type="xs:string" minOccurs="0" />
+              <xs:element name="ISSUED_TO" msprop:Generator_ColumnVarNameInTable="columnISSUED_TO" msprop:Generator_ColumnPropNameInRow="ISSUED_TO" msprop:Generator_ColumnPropNameInTable="ISSUED_TOColumn" msprop:Generator_UserColumnName="ISSUED_TO" type="xs:string" minOccurs="0" />
+              <xs:element name="ISS_QTY" msprop:Generator_ColumnVarNameInTable="columnISS_QTY" msprop:Generator_ColumnPropNameInRow="ISS_QTY" msprop:Generator_ColumnPropNameInTable="ISS_QTYColumn" msprop:Generator_UserColumnName="ISS_QTY" type="xs:string" minOccurs="0" />
+              <xs:element name="BAL_QTY" msprop:Generator_ColumnVarNameInTable="columnBAL_QTY" msprop:Generator_ColumnPropNameInRow="BAL_QTY" msprop:Generator_ColumnPropNameInTable="BAL_QTYColumn" msprop:Generator_UserColumnName="BAL_QTY" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

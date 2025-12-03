@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSPR" targetNamespace="http://tempuri.org/DSPR.xsd" xmlns:mstns="http://tempuri.org/DSPR.xsd" xmlns="http://tempuri.org/DSPR.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSPR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSPR" msprop:Generator_UserDSName="DSPR">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTPR" msprop:Generator_TableClassName="DTPRDataTable" msprop:Generator_TableVarName="tableDTPR" msprop:Generator_RowChangedName="DTPRRowChanged" msprop:Generator_TablePropName="DTPR" msprop:Generator_RowDeletingName="DTPRRowDeleting" msprop:Generator_RowChangingName="DTPRRowChanging" msprop:Generator_RowEvHandlerName="DTPRRowChangeEventHandler" msprop:Generator_RowDeletedName="DTPRRowDeleted" msprop:Generator_RowClassName="DTPRRow" msprop:Generator_UserTableName="DTPR" msprop:Generator_RowEvArgName="DTPRRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PR_ITEMNO" msprop:Generator_ColumnVarNameInTable="columnPR_ITEMNO" msprop:Generator_ColumnPropNameInRow="PR_ITEMNO" msprop:Generator_ColumnPropNameInTable="PR_ITEMNOColumn" msprop:Generator_UserColumnName="PR_ITEMNO" type="xs:int" minOccurs="0" />
+              <xs:element name="PR_UNIT" msprop:Generator_ColumnVarNameInTable="columnPR_UNIT" msprop:Generator_ColumnPropNameInRow="PR_UNIT" msprop:Generator_ColumnPropNameInTable="PR_UNITColumn" msprop:Generator_UserColumnName="PR_UNIT" type="xs:string" minOccurs="0" />
+              <xs:element name="PR_DESC" msprop:Generator_ColumnVarNameInTable="columnPR_DESC" msprop:Generator_ColumnPropNameInRow="PR_DESC" msprop:Generator_ColumnPropNameInTable="PR_DESCColumn" msprop:Generator_UserColumnName="PR_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="PR_QTY" msprop:Generator_ColumnVarNameInTable="columnPR_QTY" msprop:Generator_ColumnPropNameInRow="PR_QTY" msprop:Generator_ColumnPropNameInTable="PR_QTYColumn" msprop:Generator_UserColumnName="PR_QTY" type="xs:double" minOccurs="0" />
+              <xs:element name="PR_UCOST" msprop:Generator_ColumnVarNameInTable="columnPR_UCOST" msprop:Generator_ColumnPropNameInRow="PR_UCOST" msprop:Generator_ColumnPropNameInTable="PR_UCOSTColumn" msprop:Generator_UserColumnName="PR_UCOST" type="xs:double" minOccurs="0" />
+              <xs:element name="PR_TCOST" msprop:Generator_ColumnVarNameInTable="columnPR_TCOST" msprop:Generator_ColumnPropNameInRow="PR_TCOST" msprop:Generator_ColumnPropNameInTable="PR_TCOSTColumn" msprop:Generator_UserColumnName="PR_TCOST" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

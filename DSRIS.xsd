@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSRIS" targetNamespace="http://tempuri.org/DSRIS.xsd" xmlns:mstns="http://tempuri.org/DSRIS.xsd" xmlns="http://tempuri.org/DSRIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSRIS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSRIS" msprop:Generator_UserDSName="DSRIS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTRIS" msprop:Generator_TableClassName="DTRISDataTable" msprop:Generator_TableVarName="tableDTRIS" msprop:Generator_TablePropName="DTRIS" msprop:Generator_RowDeletingName="DTRISRowDeleting" msprop:Generator_RowChangingName="DTRISRowChanging" msprop:Generator_RowEvHandlerName="DTRISRowChangeEventHandler" msprop:Generator_RowDeletedName="DTRISRowDeleted" msprop:Generator_UserTableName="DTRIS" msprop:Generator_RowChangedName="DTRISRowChanged" msprop:Generator_RowEvArgName="DTRISRowChangeEvent" msprop:Generator_RowClassName="DTRISRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STOCK_NO" msprop:Generator_ColumnVarNameInTable="columnSTOCK_NO" msprop:Generator_ColumnPropNameInRow="STOCK_NO" msprop:Generator_ColumnPropNameInTable="STOCK_NOColumn" msprop:Generator_UserColumnName="STOCK_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="UNIT" msprop:Generator_ColumnVarNameInTable="columnUNIT" msprop:Generator_ColumnPropNameInRow="UNIT" msprop:Generator_ColumnPropNameInTable="UNITColumn" msprop:Generator_UserColumnName="UNIT" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPTIONS" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTIONS" msprop:Generator_ColumnPropNameInRow="DESCRIPTIONS" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONSColumn" msprop:Generator_UserColumnName="DESCRIPTIONS" type="xs:string" minOccurs="0" />
+              <xs:element name="QUANTITY" msprop:Generator_ColumnVarNameInTable="columnQUANTITY" msprop:Generator_ColumnPropNameInRow="QUANTITY" msprop:Generator_ColumnPropNameInTable="QUANTITYColumn" msprop:Generator_UserColumnName="QUANTITY" type="xs:string" minOccurs="0" />
+              <xs:element name="SQUANTITY" msprop:Generator_ColumnVarNameInTable="columnSQUANTITY" msprop:Generator_ColumnPropNameInRow="SQUANTITY" msprop:Generator_ColumnPropNameInTable="SQUANTITYColumn" msprop:Generator_UserColumnName="SQUANTITY" type="xs:string" minOccurs="0" />
+              <xs:element name="REMARKS" msprop:Generator_ColumnVarNameInTable="columnREMARKS" msprop:Generator_ColumnPropNameInRow="REMARKS" msprop:Generator_ColumnPropNameInTable="REMARKSColumn" msprop:Generator_UserColumnName="REMARKS" type="xs:string" minOccurs="0" />
+              <xs:element name="SAVAILABLE" msprop:Generator_ColumnVarNameInTable="columnSAVAILABLE" msprop:Generator_ColumnPropNameInRow="SAVAILABLE" msprop:Generator_ColumnPropNameInTable="SAVAILABLEColumn" msprop:Generator_UserColumnName="SAVAILABLE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

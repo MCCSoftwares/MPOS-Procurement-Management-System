@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSPO" targetNamespace="http://tempuri.org/DSPO.xsd" xmlns:mstns="http://tempuri.org/DSPO.xsd" xmlns="http://tempuri.org/DSPO.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSPO" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSPO" msprop:Generator_UserDSName="DSPO">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTPO" msprop:Generator_TableClassName="DTPODataTable" msprop:Generator_TableVarName="tableDTPO" msprop:Generator_RowChangedName="DTPORowChanged" msprop:Generator_TablePropName="DTPO" msprop:Generator_RowDeletingName="DTPORowDeleting" msprop:Generator_RowChangingName="DTPORowChanging" msprop:Generator_RowEvHandlerName="DTPORowChangeEventHandler" msprop:Generator_RowDeletedName="DTPORowDeleted" msprop:Generator_RowClassName="DTPORow" msprop:Generator_UserTableName="DTPO" msprop:Generator_RowEvArgName="DTPORowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PO_ITEMNO" msprop:Generator_ColumnVarNameInTable="columnPO_ITEMNO" msprop:Generator_ColumnPropNameInRow="PO_ITEMNO" msprop:Generator_ColumnPropNameInTable="PO_ITEMNOColumn" msprop:Generator_UserColumnName="PO_ITEMNO" type="xs:string" minOccurs="0" />
+              <xs:element name="PO_UNIT" msprop:Generator_ColumnVarNameInTable="columnPO_UNIT" msprop:Generator_ColumnPropNameInRow="PO_UNIT" msprop:Generator_ColumnPropNameInTable="PO_UNITColumn" msprop:Generator_UserColumnName="PO_UNIT" type="xs:string" minOccurs="0" />
+              <xs:element name="PO_DESC" msprop:Generator_ColumnVarNameInTable="columnPO_DESC" msprop:Generator_ColumnPropNameInRow="PO_DESC" msprop:Generator_ColumnPropNameInTable="PO_DESCColumn" msprop:Generator_UserColumnName="PO_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="PO_QTY" msprop:Generator_ColumnVarNameInTable="columnPO_QTY" msprop:Generator_ColumnPropNameInRow="PO_QTY" msprop:Generator_ColumnPropNameInTable="PO_QTYColumn" msprop:Generator_UserColumnName="PO_QTY" type="xs:string" minOccurs="0" />
+              <xs:element name="PO_UCOST" msprop:Generator_ColumnVarNameInTable="columnPO_UCOST" msprop:Generator_ColumnPropNameInRow="PO_UCOST" msprop:Generator_ColumnPropNameInTable="PO_UCOSTColumn" msprop:Generator_UserColumnName="PO_UCOST" type="xs:string" minOccurs="0" />
+              <xs:element name="PO_TCOST" msprop:Generator_ColumnVarNameInTable="columnPO_TCOST" msprop:Generator_ColumnPropNameInRow="PO_TCOST" msprop:Generator_ColumnPropNameInTable="PO_TCOSTColumn" msprop:Generator_UserColumnName="PO_TCOST" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

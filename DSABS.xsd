@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSABS" targetNamespace="http://tempuri.org/DSABS.xsd" xmlns:mstns="http://tempuri.org/DSABS.xsd" xmlns="http://tempuri.org/DSABS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSABS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSABS" msprop:Generator_UserDSName="DSABS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTABS" msprop:Generator_TableClassName="DTABSDataTable" msprop:Generator_TableVarName="tableDTABS" msprop:Generator_TablePropName="DTABS" msprop:Generator_RowDeletingName="DTABSRowDeleting" msprop:Generator_RowChangingName="DTABSRowChanging" msprop:Generator_RowEvHandlerName="DTABSRowChangeEventHandler" msprop:Generator_RowDeletedName="DTABSRowDeleted" msprop:Generator_UserTableName="DTABS" msprop:Generator_RowChangedName="DTABSRowChanged" msprop:Generator_RowEvArgName="DTABSRowChangeEvent" msprop:Generator_RowClassName="DTABSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COMPANY" msprop:Generator_ColumnVarNameInTable="columnCOMPANY" msprop:Generator_ColumnPropNameInRow="COMPANY" msprop:Generator_ColumnPropNameInTable="COMPANYColumn" msprop:Generator_UserColumnName="COMPANY" type="xs:string" minOccurs="0" />
+              <xs:element name="BIDS" msprop:Generator_ColumnVarNameInTable="columnBIDS" msprop:Generator_ColumnPropNameInRow="BIDS" msprop:Generator_ColumnPropNameInTable="BIDSColumn" msprop:Generator_UserColumnName="BIDS" type="xs:string" minOccurs="0" />
+              <xs:element name="REMARKS" msprop:Generator_ColumnVarNameInTable="columnREMARKS" msprop:Generator_ColumnPropNameInRow="REMARKS" msprop:Generator_ColumnPropNameInTable="REMARKSColumn" msprop:Generator_UserColumnName="REMARKS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
