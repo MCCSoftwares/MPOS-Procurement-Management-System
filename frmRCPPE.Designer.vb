@@ -24,10 +24,8 @@ Partial Class frmRCPPE
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRCPPE))
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.cmdsignatories = New System.Windows.Forms.Button()
+        Me.cmdprint = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -35,6 +33,10 @@ Partial Class frmRCPPE
         Me.comboenduser = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtpardate = New System.Windows.Forms.TextBox()
+        Me.txtfcluster = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,10 +45,8 @@ Partial Class frmRCPPE
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button2)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button3)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button5)
+        Me.FlowLayoutPanel1.Controls.Add(Me.cmdsignatories)
+        Me.FlowLayoutPanel1.Controls.Add(Me.cmdprint)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 62)
         Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(1)
@@ -54,64 +54,35 @@ Partial Class frmRCPPE
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1347, 51)
         Me.FlowLayoutPanel1.TabIndex = 25
         '
-        'Button1
+        'cmdsignatories
         '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(163, 46)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Create New"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmdsignatories.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmdsignatories.FlatAppearance.BorderSize = 0
+        Me.cmdsignatories.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdsignatories.Image = CType(resources.GetObject("cmdsignatories.Image"), System.Drawing.Image)
+        Me.cmdsignatories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdsignatories.Location = New System.Drawing.Point(3, 3)
+        Me.cmdsignatories.Name = "cmdsignatories"
+        Me.cmdsignatories.Size = New System.Drawing.Size(148, 46)
+        Me.cmdsignatories.TabIndex = 8
+        Me.cmdsignatories.Text = "Manage Signatories"
+        Me.cmdsignatories.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cmdsignatories.UseVisualStyleBackColor = True
         '
-        'Button2
+        'cmdprint
         '
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(172, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(72, 46)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Open"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(250, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(64, 46)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "Edit"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(320, 3)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(78, 46)
-        Me.Button5.TabIndex = 9
-        Me.Button5.Text = "Delete"
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.cmdprint.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmdprint.FlatAppearance.BorderSize = 0
+        Me.cmdprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdprint.Image = CType(resources.GetObject("cmdprint.Image"), System.Drawing.Image)
+        Me.cmdprint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdprint.Location = New System.Drawing.Point(157, 3)
+        Me.cmdprint.Name = "cmdprint"
+        Me.cmdprint.Size = New System.Drawing.Size(83, 46)
+        Me.cmdprint.TabIndex = 9
+        Me.cmdprint.Text = "Print"
+        Me.cmdprint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cmdprint.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -153,7 +124,7 @@ Partial Class frmRCPPE
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1337, 534)
+        Me.DataGridView1.Size = New System.Drawing.Size(1337, 555)
         Me.DataGridView1.TabIndex = 27
         '
         'combotype
@@ -179,7 +150,7 @@ Partial Class frmRCPPE
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 13)
         Me.Label2.TabIndex = 30
-        Me.Label2.Text = "Tyoe of PPE"
+        Me.Label2.Text = "Type of PPE"
         '
         'Label3
         '
@@ -190,12 +161,54 @@ Partial Class frmRCPPE
         Me.Label3.TabIndex = 31
         Me.Label3.Text = "For Which"
         '
+        'txtpardate
+        '
+        Me.txtpardate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtpardate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtpardate.Location = New System.Drawing.Point(1032, 181)
+        Me.txtpardate.Name = "txtpardate"
+        Me.txtpardate.Size = New System.Drawing.Size(310, 20)
+        Me.txtpardate.TabIndex = 32
+        '
+        'txtfcluster
+        '
+        Me.txtfcluster.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtfcluster.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtfcluster.Location = New System.Drawing.Point(1032, 139)
+        Me.txtfcluster.Name = "txtfcluster"
+        Me.txtfcluster.Size = New System.Drawing.Size(310, 20)
+        Me.txtfcluster.TabIndex = 33
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(1029, 123)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(66, 13)
+        Me.Label4.TabIndex = 34
+        Me.Label4.Text = "Fund Cluster"
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(1029, 165)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(55, 13)
+        Me.Label5.TabIndex = 35
+        Me.Label5.Text = "PAR Date"
+        '
         'frmRCPPE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1347, 774)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtfcluster)
+        Me.Controls.Add(Me.txtpardate)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.comboenduser)
@@ -203,6 +216,7 @@ Partial Class frmRCPPE
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmRCPPE"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Report on the Physical Count of Property, Plant, and Equipment"
@@ -217,10 +231,8 @@ Partial Class frmRCPPE
     End Sub
 
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents cmdsignatories As Button
+    Friend WithEvents cmdprint As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
@@ -228,4 +240,8 @@ Partial Class frmRCPPE
     Friend WithEvents comboenduser As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents txtpardate As TextBox
+    Friend WithEvents txtfcluster As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

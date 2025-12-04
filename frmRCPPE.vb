@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Drawing
+Imports Microsoft.Reporting.WinForms
 
 Public Class frmRCPPE
 
@@ -74,7 +75,7 @@ Public Class frmRCPPE
     End Sub
 
     '────────────────────────────────────────────────────────
-    '  COMBO EVENTS → LOAD GRID
+    '  COMBO EVENTS → LOAD GRID + HEADER FIELDS
     '────────────────────────────────────────────────────────
     Private Sub combotype_SelectedIndexChanged(sender As Object, e As EventArgs) _
         Handles combotype.SelectedIndexChanged
@@ -93,10 +94,63 @@ Public Class frmRCPPE
     Private Sub LoadGridIfReady()
         If combotype.SelectedIndex <= 0 OrElse comboenduser.SelectedIndex <= 0 Then
             DataGridView1.Rows.Clear()
+            txtfcluster.Text = String.Empty
+            txtpardate.Text = String.Empty
             Exit Sub
         End If
 
-        LoadPPERecords(combotype.Text.Trim(), comboenduser.Text.Trim())
+        Dim ppeType As String = combotype.Text.Trim()
+        Dim endUser As String = comboenduser.Text.Trim()
+
+        LoadPPERecords(ppeType, endUser)
+        LoadHeaderFieldsForSelection(ppeType, endUser)
+    End Sub
+
+    '────────────────────────────────────────────────────────
+    '  LOAD HEADER FIELDS (par_date / fcluster)
+    '────────────────────────────────────────────────────────
+    Private Sub LoadHeaderFieldsForSelection(ppeType As String, endUser As String)
+        txtfcluster.Text = String.Empty
+        txtpardate.Text = String.Empty
+
+        Try
+            Using conn As New SqlConnection(frmmain.txtdb.Text)
+                conn.Open()
+
+                Const sql As String =
+                    "SELECT TOP 1 par_date, fcluster " &
+                    "FROM TBL_PPE WITH (NOLOCK) " &
+                    "WHERE type_of_ppe = @type AND par_to = @par " &
+                    "ORDER BY par_date DESC;"
+
+                Using cmd As New SqlCommand(sql, conn)
+                    cmd.Parameters.Add("@type", SqlDbType.VarChar, 100).Value = ppeType
+                    cmd.Parameters.Add("@par", SqlDbType.VarChar, 100).Value = endUser
+
+                    Using rdr As SqlDataReader = cmd.ExecuteReader()
+                        If rdr.Read() Then
+                            ' As requested:
+                            ' txtfcluster = TBL_PPE.par_date
+                            ' txtpardate  = TBL_PPE.fcluster
+                            If Not Convert.IsDBNull(rdr("par_date")) Then
+                                Dim d As Date = CDate(rdr("par_date"))
+                                txtpardate.Text = d.ToString("MMMM dd, yyyy")
+                            End If
+
+                            If Not Convert.IsDBNull(rdr("fcluster")) Then
+                                txtfcluster.Text = rdr("fcluster").ToString()
+                            End If
+                        End If
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading header info (PAR Date / Fund Cluster):" &
+                            Environment.NewLine & ex.Message,
+                            "Header Load Error",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning)
+        End Try
     End Sub
 
     '────────────────────────────────────────────────────────
@@ -333,7 +387,7 @@ Public Class frmRCPPE
             .Alignment = DataGridViewContentAlignment.MiddleCenter
         }
 
-        ' Shortage/Overage Value - right (editable)
+        ' Shortage/Overage Value - center (editable)
         Dim colShortVal As New DataGridViewTextBoxColumn() With {
             .Name = "colShortValue",
             .HeaderText = "Shortage/Overage" & Environment.NewLine & "Value",
@@ -473,6 +527,206 @@ Public Class frmRCPPE
             Return d
         End If
         Return Nothing
+    End Function
+
+    '────────────────────────────────────────────────────────
+    '  SIGNATORIES FORM
+    '────────────────────────────────────────────────────────
+    Private Sub Cmdsignatories_Click(sender As Object, e As EventArgs) Handles cmdsignatories.Click
+        Try
+            FRMRCPPESignatory.Dispose()
+            FRMRCPPESignatory.ShowDialog()
+        Catch ex As Exception
+            ' ignore / log if needed
+        End Try
+    End Sub
+
+    '────────────────────────────────────────────────────────
+    '  PRINT → RDLC (rptrcppe.rdlc) IN frmpprev
+    '────────────────────────────────────────────────────────
+    Private Sub cmdprint_Click(sender As Object, e As EventArgs) Handles cmdprint.Click
+        Try
+            '--------------------------------------------------
+            ' 0) Validate selection
+            '--------------------------------------------------
+            If combotype.SelectedIndex <= 0 Then
+                MessageBox.Show("Please select a PPE Type before printing.",
+                            "Missing Type",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Exit Sub
+            End If
+
+            If comboenduser.SelectedIndex <= 0 Then
+                MessageBox.Show("Please select an End-User before printing.",
+                            "Missing End-User",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Exit Sub
+            End If
+
+            DataGridView1.EndEdit()
+
+            '--------------------------------------------------
+            ' 1) Build DTRCPPE from grid
+            '--------------------------------------------------
+            Dim dt As New DataTable("DTRCPPE")
+            dt.Columns.Add("Article", GetType(String))
+            dt.Columns.Add("Description", GetType(String))
+            dt.Columns.Add("PropertyNo", GetType(String))
+            dt.Columns.Add("UnitMeasure", GetType(String))
+            dt.Columns.Add("UnitValue", GetType(Decimal))
+            dt.Columns.Add("QtyCard", GetType(Decimal))
+            dt.Columns.Add("QtyPhysical", GetType(Decimal))
+            dt.Columns.Add("ShortQty", GetType(Decimal))
+            dt.Columns.Add("ShortValue", GetType(Decimal))
+            dt.Columns.Add("Remarks", GetType(String))
+
+            Dim hasDetail As Boolean = False
+
+            For Each r As DataGridViewRow In DataGridView1.Rows
+                If r.IsNewRow Then Continue For
+
+                Dim art As String = If(r.Cells("colArticle").Value, "").ToString()
+                If art = "" OrElse art = "Total" Then Continue For
+
+                hasDetail = True
+
+                Dim dr As DataRow = dt.NewRow()
+                dr("Article") = art
+                dr("Description") = If(r.Cells("colDescription").Value, "").ToString()
+                dr("PropertyNo") = If(r.Cells("colPropertyNo").Value, "").ToString()
+                dr("UnitMeasure") = If(r.Cells("colUnitMeasure").Value, "").ToString()
+                dr("UnitValue") = SafeToDecimal(r.Cells("colUnitValue").Value)
+                dr("QtyCard") = SafeToDecimal(r.Cells("colQtyCard").Value)
+                dr("QtyPhysical") = SafeToDecimal(r.Cells("colQtyPhysical").Value)
+                dr("ShortQty") = SafeToDecimal(r.Cells("colShortQty").Value)
+                dr("ShortValue") = SafeToDecimal(r.Cells("colShortValue").Value)
+                dr("Remarks") = If(r.Cells("colRemarks").Value, "").ToString()
+                dt.Rows.Add(dr)
+            Next
+
+            If Not hasDetail Then
+                MessageBox.Show("No PPE records to print for the selected Type and End-User.",
+                            "No Data",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
+
+            '--------------------------------------------------
+            ' 2) Build parameters (HTML: Name<br>Position)
+            '--------------------------------------------------
+            Dim paramList As New List(Of ReportParameter)()
+
+            Using conn As New SqlConnection(frmmain.txtdb.Text)
+                conn.Open()
+
+                Const sqlSign As String = "SELECT TOP 1 * FROM TBL_RCPPE_SIGNATORY WITH (NOLOCK);"
+
+                Using cmd As New SqlCommand(sqlSign, conn)
+                    Using rdr As SqlDataReader = cmd.ExecuteReader()
+                        If rdr.Read() Then
+
+                            Dim GetVal As Func(Of String, String) =
+                            Function(col As String) As String
+                                If rdr.IsDBNull(rdr.GetOrdinal(col)) Then Return ""
+                                Return rdr(col).ToString().Trim()
+                            End Function
+
+                            ' sig1..sig10  (each: Name<br>Position)
+                            ' sig1..sig10  (each: <u>Name</u><br>Position)
+                            For i As Integer = 1 To 10
+                                Dim name As String = GetVal("Sig" & i)
+                                Dim pos As String = GetVal("Sig" & i & "_pos")
+
+                                Dim htmlVal As String = "<u>" & name & "</u>"
+                                If pos <> "" Then
+                                    htmlVal &= "<br>" & pos
+                                End If
+
+                                paramList.Add(New ReportParameter("sig" & i, htmlVal))
+                            Next
+
+                            ' appby (Approved_by + app_pos)
+                            Dim appName As String = GetVal("Approved_by")
+                            Dim appPos As String = GetVal("app_pos")
+
+                            Dim appHtml As String = "<u>" & appName & "</u>"
+                            If appPos <> "" Then
+                                appHtml &= "<br>" & appPos
+                            End If
+                            paramList.Add(New ReportParameter("appby", appHtml))
+
+                            ' veriby (Verified_by + veri_pos)
+                            Dim veriName As String = GetVal("Verified_by")
+                            Dim veriPos As String = GetVal("veri_pos")
+
+                            Dim veriHtml As String = "<u>" & veriName & "</u>"
+                            If veriPos <> "" Then
+                                veriHtml &= "<br>" & veriPos
+                            End If
+                            paramList.Add(New ReportParameter("veriby", veriHtml))
+
+                        End If
+                    End Using
+                End Using
+            End Using
+
+            ' Other text parameters
+            Dim fclusterText As String = txtfcluster.Text.Trim()
+            Dim parDateText As String = txtpardate.Text.Trim()
+            Dim typeText As String = combotype.Text.Trim()
+            Dim endUserText As String = comboenduser.Text.Trim()
+
+            Dim forWhichText As String =
+            endUserText & " MPOS-BARMM is accountable, having assumed such accountability on " & parDateText
+
+            Dim asOfText As String = Date.Now.ToString("MMMM dd, yyyy")
+
+            paramList.Add(New ReportParameter("fcluster", fclusterText))
+            paramList.Add(New ReportParameter("forwhich", forWhichText))
+            paramList.Add(New ReportParameter("type", typeText))
+            paramList.Add(New ReportParameter("asof", asOfText))
+
+            '--------------------------------------------------
+            ' 3) Show RDLC in frmpprev
+            '--------------------------------------------------
+            frmpprev.Dispose()
+
+            Dim rptPath As String =
+            System.IO.Path.Combine(Application.StartupPath, "Report\rptrcppe.rdlc")
+
+            With frmpprev.ReportViewer1
+                .Reset()
+                .LocalReport.ReportPath = rptPath
+                .LocalReport.DataSources.Clear()
+                .LocalReport.DataSources.Add(New ReportDataSource("DSRCPPE", dt))
+                .LocalReport.SetParameters(paramList)
+                .SetDisplayMode(DisplayMode.PrintLayout)
+                .ZoomMode = ZoomMode.Percent
+                .ZoomPercent = 100
+                .RefreshReport()
+            End With
+
+            frmpprev.panelsubmit.Visible = False
+            frmpprev.ShowDialog()
+
+        Catch ex As Exception
+            MessageBox.Show("Error generating PPE Report:" & Environment.NewLine & ex.Message,
+                        "Print Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
+
+    Private Function SafeToDecimal(value As Object) As Decimal
+        If value Is Nothing OrElse IsDBNull(value) Then Return 0D
+        Dim s As String = value.ToString().Trim()
+        If s = "" Then Return 0D
+        Dim d As Decimal
+        If Decimal.TryParse(s, d) Then
+            Return d
+        End If
+        Return 0D
     End Function
 
 End Class

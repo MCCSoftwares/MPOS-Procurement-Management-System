@@ -29,7 +29,7 @@
     <ProductName>MPOS Procurement Management System</ProductName>
     <PublisherName>MCC Softwares</PublisherName>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.1.3.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -469,6 +469,12 @@
     <Compile Include="frmRCPPE.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRCPPESignatory.Designer.vb">
+      <DependentUpon>frmRCPPESignatory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRCPPESignatory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmrfq.Designer.vb">
       <DependentUpon>frmrfq.vb</DependentUpon>
     </Compile>
@@ -715,6 +721,9 @@
     <EmbeddedResource Include="frmRCPPE.resx">
       <DependentUpon>frmRCPPE.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRCPPESignatory.resx">
+      <DependentUpon>frmRCPPESignatory.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmrfq.resx">
       <DependentUpon>frmrfq.vb</DependentUpon>
     </EmbeddedResource>
@@ -802,7 +811,9 @@
     <Content Include="Report\rptrsmi.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="rptrcppe.rdlc" />
+    <Content Include="Report\rptrcppe.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="DSABS.xsc">
