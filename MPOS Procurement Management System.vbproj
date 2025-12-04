@@ -167,6 +167,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSPR.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSRCPPE.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRCPPE.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSRFQ.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -797,6 +802,7 @@
     <Content Include="Report\rptrsmi.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="rptrcppe.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DSABS.xsc">
@@ -853,6 +859,17 @@
     </None>
     <None Include="DSPR.xss">
       <DependentUpon>DSPR.xsd</DependentUpon>
+    </None>
+    <None Include="DSRCPPE.xsc">
+      <DependentUpon>DSRCPPE.xsd</DependentUpon>
+    </None>
+    <None Include="DSRCPPE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRCPPE.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSRCPPE.xss">
+      <DependentUpon>DSRCPPE.xsd</DependentUpon>
     </None>
     <None Include="DSRFQ.xsc">
       <DependentUpon>DSRFQ.xsd</DependentUpon>

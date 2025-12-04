@@ -31,6 +31,10 @@ Partial Class frmRCPPE
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.combotype = New System.Windows.Forms.ComboBox()
+        Me.comboenduser = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -144,13 +148,47 @@ Partial Class frmRCPPE
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(5, 171)
+        Me.DataGridView1.Location = New System.Drawing.Point(5, 207)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1337, 570)
+        Me.DataGridView1.Size = New System.Drawing.Size(1337, 534)
         Me.DataGridView1.TabIndex = 27
+        '
+        'combotype
+        '
+        Me.combotype.FormattingEnabled = True
+        Me.combotype.Location = New System.Drawing.Point(5, 138)
+        Me.combotype.Name = "combotype"
+        Me.combotype.Size = New System.Drawing.Size(363, 21)
+        Me.combotype.TabIndex = 28
+        '
+        'comboenduser
+        '
+        Me.comboenduser.FormattingEnabled = True
+        Me.comboenduser.Location = New System.Drawing.Point(5, 180)
+        Me.comboenduser.Name = "comboenduser"
+        Me.comboenduser.Size = New System.Drawing.Size(363, 21)
+        Me.comboenduser.TabIndex = 29
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(2, 122)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 13)
+        Me.Label2.TabIndex = 30
+        Me.Label2.Text = "Tyoe of PPE"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(2, 164)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 13)
+        Me.Label3.TabIndex = 31
+        Me.Label3.Text = "For Which"
         '
         'frmRCPPE
         '
@@ -158,18 +196,23 @@ Partial Class frmRCPPE
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1347, 774)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.comboenduser)
+        Me.Controls.Add(Me.combotype)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmRCPPE"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmRCPPE"
+        Me.Text = "Report on the Physical Count of Property, Plant, and Equipment"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -181,4 +224,8 @@ Partial Class frmRCPPE
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents combotype As ComboBox
+    Friend WithEvents comboenduser As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

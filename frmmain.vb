@@ -575,4 +575,13 @@ Public Class frmmain
     Private Sub Button10_Click_1(sender As Object, e As EventArgs) Handles Button10.Click
         frmsupplier.ShowDialog()
     End Sub
+
+    Private Sub Cmdrcppe_Click(sender As Object, e As EventArgs) Handles cmdrcppe.Click
+        Try
+            frmRCPPE.Dispose()
+            frmRCPPE.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
